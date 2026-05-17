@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'urgent' | 'ghost' | 'textLink';
+export type ButtonVariant = 'primary' | 'secondary' | 'urgent' | 'ghost' | 'textLink' | 'outline';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -29,6 +29,7 @@ export default function Button({
     secondary: "bg-transparent text-curry border-[1.5px] border-curry hover:bg-mint",
     urgent: "bg-chilli text-white hover:bg-[#9E4A2A]",
     ghost: "bg-transparent text-banana border border-banana hover:bg-white/10",
+    outline: "bg-transparent text-forest border border-border hover:bg-mint hover:border-curry hover:text-curry",
     textLink: "bg-transparent border-none text-curry hover:underline underline-offset-4 px-0",
   };
 
