@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story - Arumai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&amp;family=Inter:wght@400;500&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#9dd3ae",
+                        "secondary-container": "#fdcd74",
+                        "on-background": "#0c2011",
+                        "primary-fixed-dim": "#9dd3ae",
+                        "secondary-fixed-dim": "#eec068",
+                        "outline": "#717972",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary": "#0f4429",
+                        "tertiary-container": "#853d28",
+                        "tertiary-fixed-dim": "#ffb59f",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#9dd2ae",
+                        "surface": "#eaffe9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#3a0a00",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-primary-fixed": "#002110",
+                        "on-surface": "#0c2011",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#d6efd6",
+                        "on-primary-fixed-variant": "#1d5034",
+                        "on-surface-variant": "#414942",
+                        "on-secondary-container": "#785601",
+                        "surface-dim": "#c8e0c8",
+                        "surface-bright": "#eaffe9",
+                        "primary-fixed": "#b9efc9",
+                        "outline-variant": "#c0c9c0",
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#213524",
+                        "inverse-on-surface": "#dff7de",
+                        "on-tertiary-fixed-variant": "#76321d",
+                        "tertiary": "#672713",
+                        "secondary": "#7b5804",
+                        "surface-container-highest": "#d0e9d1",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#d0e9d1",
+                        "surface-tint": "#36684a",
+                        "background": "#eaffe9",
+                        "surface-container-low": "#e1fae1",
+                        "surface-container": "#dcf4dc",
+                        "primary-container": "#2a5c3f",
+                        "on-tertiary-container": "#ffb49e",
+                        "secondary-fixed": "#ffdea6",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#271900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin_desktop": "48px",
+                        "stack_sm": "8px",
+                        "gutter": "24px",
+                        "margin_mobile": "16px",
+                        "max_width": "1200px",
+                        "stack_md": "24px",
+                        "stack_lg": "64px"
+                    },
+                    "fontFamily": {
+                        "h1-mobile": ["Playfair Display"],
+                        "h2": ["Playfair Display"],
+                        "price": ["Space Mono"],
+                        "h1-desktop": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label": ["Inter"],
+                        "h3": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "h2": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "price": ["18px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "h1-desktop": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "h3": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim text-primary dark:text-inverse-primary font-body-md text-body-md docked full-width top-0 sticky border-b border-outline-variant dark:border-outline flat no shadows z-40">
+<div class="flex justify-between items-center w-full px-margin_desktop max-w-max_width mx-auto h-20 md:px-margin_mobile">
+<div class="text-h3 font-h3 font-semibold text-primary dark:text-inverse-primary">
+                Arumai
+            </div>
+<nav class="hidden md:flex space-x-gutter items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Menu</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Our Story</a>
+</nav>
+<button class="bg-[#D4A853] text-[#1A2E1E] font-label text-label px-6 py-3 rounded-lg hover:scale-95 duration-150 transition-transform">
+                Reserve
+            </button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Section 1: Cinematic Opening -->
+<section class="relative h-screen w-full flex items-center justify-center bg-black">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover opacity-60" data-alt="A warm, inviting cinematic shot of a heritage South Indian dining room at dusk. Rich teak wood furniture glows softly under amber pendant lights. The atmosphere is quiet, intimate, and deeply traditional yet modern. Shadows are deep, creating a moody, premium fine-dining aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM4GVyAoupVWa9j0AhkxCuEeJ288fyiEiBhZiKhUBIVBGkVwY3AmwzM_B1BTFw2Zd9euzSncDp-94ljV2rJ0G5hQgUdhW9IjGDmx7cxznctBrSmrAyb7WEW3iPVJFTGpCQbW4T2Rm_ucebaBqzqMo7P9S-njD4LrALEh2UX6HW6ZuZdDyzkO5lxlbtDqpqrzzybqd0A_Dgl8dRXpfQ41a6gYZv3yFZggq8DcTQYEDZpirl_6r8XqKvS4Ftn3miJNYosSTj7pgdb-E"/>
+</div>
+<div class="relative z-10 text-center px-margin_desktop max-w-4xl mx-auto flex flex-col items-center">
+<h1 class="font-h1-desktop text-h1-desktop text-[#F2E8D6] italic mb-stack_md" style="font-family: 'Playfair Display', serif; font-weight: 600; font-style: italic;">
+                    "Good food comes from people who care deeply."
+                </h1>
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-2xl">
+                    Rooted in the heart of T. Nagar since 2007. A legacy of warmth, brass vessels, and uncompromised South Indian flavors.
+                </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary"></div>
+</section>
+<!-- Section 2: Origin Story -->
+<section class="bg-[#FAFAF7] py-stack_lg px-margin_desktop md:px-margin_mobile flex justify-center">
+<div class="w-full max-w-[680px] flex flex-col gap-stack_md">
+<h2 class="font-h2 text-h2 text-primary">One brass vessel. Eighteen years.</h2>
+<div class="font-body-md text-body-md text-on-surface-variant flex flex-col gap-stack_sm">
+<p>It started not with a grand business plan, but with a simple desire to share the meals that defined our childhoods. Arumai was born in a small kitchen where the air was always thick with the scent of roasted coriander and fresh curry leaves.</p>
+<p>We didn't have much space, but we had a massive brass uruli that had been in our family for three generations. That vessel became the beating heart of our kitchen. Every gravy, every slow-cooked dal, every biryani passed through it, absorbing the history and warmth of the metal.</p>
+</div>
+<blockquote class="border-l-4 border-secondary pl-6 py-2 my-stack_sm">
+<p class="font-h3 text-h3 text-on-surface italic leading-snug" style="font-family: 'Playfair Display', serif;">
+                        "My mother told me never to write down the spice proportions. She said you must feel the heat of the pan and smell the readiness of the mustard seeds. Cooking is an instinct, not an equation."
+                    </p>
+</blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant">Today, eighteen years later, that same brass vessel sits in our modern kitchen. The fire underneath it burns differently now, but the hands that stir the pot still follow the same instincts.</p>
+</div>
+</section>
+<!-- Section 3: The People -->
+<section class="bg-[#F2E8D6] py-stack_lg px-margin_desktop md:px-margin_mobile">
+<div class="max-w-max_width mx-auto flex flex-col gap-stack_lg">
+<h2 class="font-h2 text-h2 text-primary text-center">The hands behind every plate.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Team Card 1 -->
+<div class="flex flex-col gap-stack_sm">
+<div class="aspect-square w-full overflow-hidden rounded-xl border border-[#E2D9C6]">
+<img alt="" class="w-full h-full object-cover" data-alt="Candid, warm portrait of a senior South Indian male chef in a pristine white chef's coat. He is smiling gently, standing in a naturally lit, clean professional kitchen. The lighting is soft and flattering, highlighting his experienced, weathered hands and kind eyes. The aesthetic is authentic and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw8u40HEiEtQvMcxq5m_RX1wUBaOVA0MPMY3BHe0ChBXMvd97OjcTTXjCeoB6YSsJHMuIIMq8mt7L0ZehOJVDPpbVytEs92-EDgH_bIiEnK7uWpIERWrA2SJM9bJ4-rAmy_yBV7PDFdw71283bwWcReHktkDVc2SG-Armzuf2BvjNwGdLeLW7Rhfsm7m2SluqEAouV0omlp0uK-p8zLoFwZuWHUTyxwpBa4WUAn2ai4xN5hmt0pDgWidZMWZ9rB2oyWT18zBoBJHg"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary">Karthikeyan</h3>
+<p class="font-label text-label text-secondary mb-2">HEAD CHEF</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Mastering the fire for over three decades. Karthikeyan oversees the daily ritual of grinding fresh masalas before dawn.</p>
+</div>
+</div>
+<!-- Team Card 2 -->
+<div class="flex flex-col gap-stack_sm">
+<div class="aspect-square w-full overflow-hidden rounded-xl border border-[#E2D9C6]">
+<img alt="" class="w-full h-full object-cover" data-alt="Candid portrait of a confident South Indian female restaurant manager in an elegant, simple cotton saree. She is standing in a softly lit, modern dining room with heritage wooden accents. She exudes warmth and professional hospitality. The color palette features earthy greens and warm whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqVYHpVWefQwo3c0jPwPEJ7QdOIDsT2yp-ShtsF8aAK97mil6lOkDmEan6cEWfoHXpaVySsgr05NWK7rOWFWm6rKnvxAbdvPkxtPPE6dootOgcjVuqjHO9AczYxPEHtcDoO4zjpdZEFeYz7lGtHK5UjQzfNzT1fu5ZNyndvB9s4jXthkkO7_2MFK9J5HhLJErapgBdwl4cLoYoyyHapuT46Gm70D9kJwoLl7bZLLxw8-RXQ8FiWQzHn245ckdNtK6B6zNMG9bYGbU"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary">Meenakshi</h3>
+<p class="font-label text-label text-secondary mb-2">SERVICE DIRECTOR</p>
+<p class="font-body-md text-body-md text-on-surface-variant">The soul of our dining room. She remembers the favorite table and dietary preferences of guests who have been visiting us for years.</p>
+</div>
+</div>
+<!-- Team Card 3 -->
+<div class="flex flex-col gap-stack_sm">
+<div class="aspect-square w-full overflow-hidden rounded-xl border border-[#E2D9C6]">
+<img alt="" class="w-full h-full object-cover" data-alt="Candid portrait of a young, focused South Indian male sous chef plating a dish in a modern kitchen. He wears a dark apron over a white shirt. The lighting highlights the fresh green herbs and vibrant colors of the food on the pass. The mood is concentrated and passionate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfSXWuM_im0XFwx4bhKtG6M4xfBcIET3UdWx-ct0XFiqBuOiXnsrU6casKGrQHfkpezhDF1oG_FdhrHEDKzrr2jrQG2SQRn7g9YBtfVEg2PGNrN-pdcPBtijheyBify1NYHTyC4_2SADAd9usSwF1OpQO5ZhRi4SaWZW_sCBz8BIe0Czlce2bjCdOoKFJIqck7AuWbQirp4BRx4cS8T32h-3vhh6Lr563JvgrvXCn5lJbQgU6WCzEu2Uu2oT8_a4hRj9usvrXbmcU"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary">Siddharth</h3>
+<p class="font-label text-label text-secondary mb-2">SOUS CHEF</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Bringing modern techniques to heritage recipes. Siddharth ensures every plate leaving the pass respects both tradition and contemporary aesthetics.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Philosophy & Sourcing -->
+<section class="bg-[#FAFAF7] py-stack_lg px-margin_desktop md:px-margin_mobile">
+<div class="max-w-max_width mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack_lg items-center">
+<div class="flex flex-col gap-stack_md">
+<h2 class="font-h2 text-h2 text-primary">We believe sourcing is a decision, not a coincidence.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Excellence begins long before the stove is lit. We spend countless hours building relationships with farmers in the Western Ghats and fishermen along the Coromandel coast. Our ingredients dictate our menu, never the other way around.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-stack_sm">
+<span class="bg-[#F2E8D6] text-[#4A6B52] font-label text-label px-4 py-2 rounded-full border border-[#E2D9C6]">Stone-ground spices</span>
+<span class="bg-[#F2E8D6] text-[#4A6B52] font-label text-label px-4 py-2 rounded-full border border-[#E2D9C6]">Coastal seafood</span>
+<span class="bg-[#F2E8D6] text-[#4A6B52] font-label text-label px-4 py-2 rounded-full border border-[#E2D9C6]">No MSG</span>
+</div>
+</div>
+<div class="h-[600px] w-full rounded-xl overflow-hidden border border-[#E2D9C6]">
+<img alt="" class="w-full h-full object-cover" data-alt="A vertical, highly detailed flat-lay macro shot of premium Indian spices and fresh produce scattered elegantly on a textured linen surface. Vibrant red chilies, earthy brown coriander seeds, bright yellow turmeric root, and fresh green curry leaves. Natural, directional lighting creates beautiful textures and shadows. Editorial, high-end food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC7FNvGxnniBOthjXVCUq6Nlz_fOmXRnnfJvX3oDnDJPJlQzq3S7veTWmx3Vifuy2ut6Z6liUSVHa5eHp05FkSxMO9UAmPLc46Keqfmdz4pQZ_UUZzxNukARLwBHQfdrm4_1vftvNkSM3eniYpMU0C-wUEfQlRG94dksnwAcXaecxdAWO9W8kmCFav95CctKrcRjnbXo1CbpPwJ_zWnqB4nAWi0El87yYm5OXT4c-82XKrZdoqhrCi25JKdfnnemgxii1S14tpJfU"/>
+</div>
+</div>
+</section>
+<!-- Section 5: Invitation -->
+<section class="bg-[#1A2E1E] py-stack_lg px-margin_desktop md:px-margin_mobile text-center">
+<div class="max-w-2xl mx-auto flex flex-col gap-stack_md items-center">
+<h2 class="font-h2 text-h2 text-[#F2E8D6]">We'd love to cook for you.</h2>
+<p class="font-body-lg text-body-lg text-[#c8e0c8]">
+                    Whether you are joining us for a quiet dinner or celebrating a milestone, we promise a table full of flavor, warmth, and the unmistakable feeling of home.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-stack_sm w-full sm:w-auto justify-center">
+<button class="bg-[#D4A853] text-[#1A2E1E] font-label text-label px-8 py-4 rounded-lg hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center gap-2">
+                        Reserve your table <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-transparent text-[#9dd3ae] border border-[#2A5C3F] font-label text-label px-8 py-4 rounded-lg hover:bg-[#2A5C3F] hover:text-white transition-colors flex items-center justify-center gap-2">
+                        View our menu <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-primary dark:bg-on-background text-on-primary dark:text-on-primary-fixed font-label text-label docked full-width bottom-0 fixed z-50 shadow-lg fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container" href="#">
+<span class="material-symbols-outlined mb-1">event_seat</span>
+<span>Book Table</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container" href="#">
+<span class="material-symbols-outlined mb-1">call</span>
+<span>Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container" href="#">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span>WhatsApp</span>
+</a>
+</nav>
+<!-- Floating WhatsApp Button (Desktop) -->
+<a class="hidden md:flex fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-105 transition-transform z-50 items-center justify-center" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-background text-on-primary dark:text-on-primary-fixed font-body-md text-body-md full-width bg-primary flat pb-20 md:pb-0">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin_desktop py-stack_lg max-w-max_width mx-auto gap-stack_md text-center md:text-left">
+<div class="text-h3 font-h3 font-semibold text-on-primary">
+                Arumai
+            </div>
+<div class="flex gap-gutter">
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Instagram</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Facebook</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Twitter</a>
+</div>
+<div class="text-on-primary-fixed-variant text-sm">
+                © 2024 Arumai. All Rights Reserved. FSSAI Lic. No. 12345678901234
+            </div>
+</div>
+</footer>
+</body></html>

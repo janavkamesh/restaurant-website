@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reserve - Arumai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&amp;family=Inter:wght@400;500;600&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#9dd3ae",
+                        "secondary-container": "#fdcd74",
+                        "on-background": "#0c2011",
+                        "primary-fixed-dim": "#9dd3ae",
+                        "secondary-fixed-dim": "#eec068",
+                        "outline": "#717972",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary": "#0f4429",
+                        "tertiary-container": "#853d28",
+                        "tertiary-fixed-dim": "#ffb59f",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#9dd2ae",
+                        "surface": "#eaffe9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#3a0a00",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-primary-fixed": "#002110",
+                        "on-surface": "#0c2011",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#d6efd6",
+                        "on-primary-fixed-variant": "#1d5034",
+                        "on-surface-variant": "#414942",
+                        "on-secondary-container": "#785601",
+                        "surface-dim": "#c8e0c8",
+                        "surface-bright": "#eaffe9",
+                        "primary-fixed": "#b9efc9",
+                        "outline-variant": "#c0c9c0",
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#213524",
+                        "inverse-on-surface": "#dff7de",
+                        "on-tertiary-fixed-variant": "#76321d",
+                        "tertiary": "#672713",
+                        "secondary": "#7b5804",
+                        "surface-container-highest": "#d0e9d1",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#d0e9d1",
+                        "surface-tint": "#36684a",
+                        "background": "#eaffe9",
+                        "surface-container-low": "#e1fae1",
+                        "surface-container": "#dcf4dc",
+                        "primary-container": "#2a5c3f",
+                        "on-tertiary-container": "#ffb49e",
+                        "secondary-fixed": "#ffdea6",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#271900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin_desktop": "48px",
+                        "stack_sm": "8px",
+                        "gutter": "24px",
+                        "margin_mobile": "16px",
+                        "max_width": "1200px",
+                        "stack_md": "24px",
+                        "stack_lg": "64px"
+                    },
+                    "fontFamily": {
+                        "h1-mobile": ["Playfair Display"],
+                        "h2": ["Playfair Display"],
+                        "price": ["Space Mono"],
+                        "h1-desktop": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label": ["Inter"],
+                        "h3": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "h2": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "price": ["18px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "h1-desktop": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "h3": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #FAFAF7; color: #0c2011; }
+        .bg-milk-white { background-color: #FAFAF7; }
+        .bg-banana-leaf { background-color: #F2E8D6; }
+        .border-hairline { border-color: #E2D9C6; }
+        .text-deep-forest { color: #1A2E1E; }
+        .text-sage-green { color: #4A6B52; }
+        .bg-ghee-gold { background-color: #D4A853; }
+        .text-ghee-gold { color: #D4A853; }
+        .border-curry-leaf { border-color: #2A5C3F; }
+        .text-curry-leaf { color: #2A5C3F; }
+        .bg-curry-leaf { background-color: #2A5C3F; }
+        .bg-tertiary-custom { background-color: #7A3520; }
+        .hover-elevate:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(26, 46, 30, 0.05); }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-dim font-body-md text-body-md docked full-width top-0 sticky border-b border-outline-variant dark:border-outline flat no shadows z-50">
+<div class="flex justify-between items-center w-full px-margin_desktop max-w-max_width mx-auto h-20">
+<div class="text-h3 font-h3 font-semibold text-primary dark:text-inverse-primary">Arumai</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Menu</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Our Story</a>
+</div>
+<button class="bg-ghee-gold text-deep-forest font-label text-label px-6 py-3 rounded-lg hover-elevate transition-all">Reserve</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Section 1: Reservation Widget -->
+<section class="bg-milk-white py-stack_lg px-margin_mobile md:px-margin_desktop">
+<div class="max-w-[560px] mx-auto bg-white border border-hairline rounded-[24px] p-8 md:p-12 hover-elevate transition-all">
+<h1 class="font-h2 text-h2 text-center text-deep-forest mb-8">Reserve your table</h1>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label text-label text-sage-green mb-2">Date</label>
+<input class="w-full bg-milk-white border border-hairline rounded-lg px-4 py-3 font-body-md focus:outline-none focus:border-curry-leaf focus:ring-1 focus:ring-curry-leaf" type="date"/>
+</div>
+<div>
+<label class="block font-label text-label text-sage-green mb-2">Party Size</label>
+<div class="flex items-center justify-between border border-hairline rounded-lg px-4 py-3 bg-milk-white">
+<button class="text-curry-leaf" type="button"><span class="material-symbols-outlined">remove</span></button>
+<span class="font-body-md">2 Guests</span>
+<button class="text-curry-leaf" type="button"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label text-label text-sage-green mb-2">Time</label>
+<div class="grid grid-cols-4 gap-3">
+<button class="border border-hairline rounded-lg py-2 font-body-md hover:border-curry-leaf focus:bg-curry-leaf focus:text-white transition-colors" type="button">18:00</button>
+<button class="border border-hairline rounded-lg py-2 font-body-md hover:border-curry-leaf focus:bg-curry-leaf focus:text-white transition-colors" type="button">18:30</button>
+<button class="border border-hairline rounded-lg py-2 font-body-md bg-curry-leaf text-white transition-colors" type="button">19:00</button>
+<button class="border border-hairline rounded-lg py-2 font-body-md hover:border-curry-leaf focus:bg-curry-leaf focus:text-white transition-colors" type="button">19:30</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label text-label text-sage-green mb-2">Name</label>
+<input class="w-full bg-milk-white border border-hairline rounded-lg px-4 py-3 font-body-md focus:outline-none focus:border-curry-leaf focus:ring-1 focus:ring-curry-leaf" placeholder="Your name" type="text"/>
+</div>
+<div>
+<label class="block font-label text-label text-sage-green mb-2">Phone</label>
+<div class="flex">
+<span class="bg-milk-white border border-r-0 border-hairline rounded-l-lg px-4 py-3 font-body-md text-sage-green">+91</span>
+<input class="w-full bg-milk-white border border-hairline rounded-r-lg px-4 py-3 font-body-md focus:outline-none focus:border-curry-leaf focus:ring-1 focus:ring-curry-leaf" placeholder="Mobile number" type="tel"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label text-label text-sage-green mb-2">Special Requests (Optional)</label>
+<textarea class="w-full bg-milk-white border border-hairline rounded-lg px-4 py-3 font-body-md focus:outline-none focus:border-curry-leaf focus:ring-1 focus:ring-curry-leaf" rows="2"></textarea>
+</div>
+<button class="w-full bg-ghee-gold text-deep-forest font-label text-label py-4 rounded-lg flex items-center justify-center gap-2 hover-elevate transition-all mt-4" type="submit">
+                        Confirm reservation <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<p class="text-center text-sm text-sage-green font-body-md mt-4">You will receive a confirmation via WhatsApp within 90 minutes.</p>
+</form>
+</div>
+</section>
+<!-- Section 2: Experience Options -->
+<section class="bg-banana-leaf py-stack_lg px-margin_mobile md:px-margin_desktop">
+<div class="max-w-max_width mx-auto">
+<h2 class="font-h2 text-h2 text-center text-deep-forest mb-12">Something more than dinner?</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Tasting Menu Card -->
+<div class="bg-white border border-hairline rounded-xl overflow-hidden hover-elevate transition-all flex flex-col">
+<div class="aspect-video w-full bg-surface-dim relative">
+<img alt="A beautifully plated traditional South Indian thali spread served on a fresh green banana leaf. The meal features vibrant arrays of curries, chutneys, and rice, illuminated by soft, warm, directional lighting that highlights the textures of the food. The setting evokes a premium, authentic heritage dining experience with a modern editorial aesthetic, grounded in natural earthy tones." class="w-full h-full object-cover" data-alt="A beautifully plated traditional South Indian thali spread served on a fresh green banana leaf. The meal features vibrant arrays of curries, chutneys, and rice, illuminated by soft, warm, directional lighting that highlights the textures of the food. The setting evokes a premium, authentic heritage dining experience with a modern editorial aesthetic, grounded in natural earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ9Sh61t3l9ryTP7LGklhpZ9pbUkFujVJ4U8XLY9j44LzPObJR97owDtjlmUxMpBVfgSOEdgzFeMGPMYC5E9nNEuR4LOABuuaoF-nhWDZ9TvEvqC4Ry0oDb_zNR_GFsbKnVnt363a9geDx-pig3JH6t8X-_8o1n2GOkILxz2Ia51XyBYl1VSuRSov_4ZFcrR9kL5i8lEDH19S3c1u6tLGG0f6LcxgzhBQj588WswyfyPNblbcJauKkFr4ctP8ZJCUFkrGU5KWgRnM"/>
+<div class="absolute top-4 left-4 bg-banana-leaf text-sage-green font-label text-[12px] px-3 py-1 rounded-full">Signature</div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="font-h3 text-h3 text-deep-forest mb-2">The Chettinad Tasting Menu</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">A curated 7-course journey through the bold, complex flavors of the Chettinad region, featuring heritage recipes reimagined for modern fine dining.</p>
+<button class="bg-transparent border border-curry-leaf text-curry-leaf font-label text-label py-3 rounded-lg w-full hover:bg-curry-leaf hover:text-white transition-colors">Book Experience</button>
+</div>
+</div>
+<!-- Private Events Card -->
+<div class="bg-white border border-hairline rounded-xl overflow-hidden hover-elevate transition-all flex flex-col">
+<div class="aspect-video w-full bg-surface-dim relative">
+<img alt="An elegant, softly lit private dining room in a high-end restaurant. The long wooden table is impeccably set with fine glassware, minimalist ceramic plates, and subtle floral centerpieces. The ambiance is intimate and exclusive, characterized by warm ambient lighting, deep wood tones, and sophisticated architectural lines, perfectly aligning with a modern luxury aesthetic." class="w-full h-full object-cover" data-alt="An elegant, softly lit private dining room in a high-end restaurant. The long wooden table is impeccably set with fine glassware, minimalist ceramic plates, and subtle floral centerpieces. The ambiance is intimate and exclusive, characterized by warm ambient lighting, deep wood tones, and sophisticated architectural lines, perfectly aligning with a modern luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIfqsLGqkJl1XtnsdQCe26DJKAhceg5yidu2NykocDPSd96JDbzx2DbL2jkd5BIFOqGQ-uSCUI-g9UHiCcPhhIglsxpE8hsrI603Yf5ab4YP4X5un4Fbm1qcDBcFjgYjiPQUyhirzceBWAZVKdoagvK-U2U6cLrNm7K1III4Y6a4F8A-qnbquETyHZkfPrYhqROTcydYdszFfMj9ajb5yOefgb_zg4nfwnbTwYYg0ACNRI58FCvNuDQT26hQxnpvTB8kRnaGghYd8"/>
+<div class="absolute top-4 left-4 bg-banana-leaf text-sage-green font-label text-[12px] px-3 py-1 rounded-full">Exclusive</div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="font-h3 text-h3 text-deep-forest mb-2">Private Dining &amp; Events</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Intimate spaces tailored for your special occasions. Dedicated service, customizable menus, and an atmosphere of refined elegance for up to 30 guests.</p>
+<button class="bg-transparent border border-curry-leaf text-curry-leaf font-label text-label py-3 rounded-lg w-full flex items-center justify-center gap-2 hover:bg-curry-leaf hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">chat</span> WhatsApp Us
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Private Dining Feature -->
+<section class="bg-milk-white py-stack_lg px-margin_mobile md:px-margin_desktop">
+<div class="max-w-max_width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(26,46,30,0.08)]">
+<img alt="A masterfully designed culinary event space featuring a large, rustic yet refined dining table surrounded by comfortable, stylish seating. The room is bathed in natural light filtering through sheer linen curtains, casting soft shadows across the smooth surfaces. The aesthetic blends traditional warmth with modern minimalism, utilizing a palette of forest greens, warm woods, and stark whites." class="w-full h-auto object-cover aspect-[4/5]" data-alt="A masterfully designed culinary event space featuring a large, rustic yet refined dining table surrounded by comfortable, stylish seating. The room is bathed in natural light filtering through sheer linen curtains, casting soft shadows across the smooth surfaces. The aesthetic blends traditional warmth with modern minimalism, utilizing a palette of forest greens, warm woods, and stark whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDncLeLiDLjfy5ph0wbq-btGm0z8hjc8GhAiMG5jnZfbimiM6dlWlobpTocTxYUPU1V8YGuQIhE2FeYAPGhZMDAwpfJXasAmITD0VMSYHyC7laWDuwp4gLX11z8oZAAN5nRejjLGxBPXhnXrw8L-ViqccqJeyuyBKjC5w2R24G2sQdx1ZyHCeCT0Upwb6tFJ9tIjjdwjGIQTTdhUkdinJ09EUCoF0bGBUkkwOcK29xk-ZZH5Rtp57CJ94UEbm-YtIYf8zc78lD6GRI"/>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-h2 text-h2 text-deep-forest mb-6">Host your next occasion with us</h2>
+<ul class="space-y-4 mb-8 font-body-lg text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-ghee-gold mt-1">check_circle</span>
+<span>Bespoke menus crafted by our executive chef</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-ghee-gold mt-1">check_circle</span>
+<span>Dedicated sommelier and service team</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-ghee-gold mt-1">check_circle</span>
+<span>Flexible seating arrangements for 10-30 guests</span>
+</li>
+</ul>
+<div class="bg-white border border-hairline rounded-xl p-6">
+<h4 class="font-label text-label text-deep-forest mb-4 uppercase tracking-widest">Inquire Now</h4>
+<form class="space-y-4">
+<input class="w-full bg-milk-white border border-hairline rounded-lg px-4 py-3 font-body-md focus:outline-none focus:border-curry-leaf" placeholder="Name" type="text"/>
+<input class="w-full bg-milk-white border border-hairline rounded-lg px-4 py-3 font-body-md focus:outline-none focus:border-curry-leaf" placeholder="Phone Number" type="tel"/>
+<select class="w-full bg-milk-white border border-hairline rounded-lg px-4 py-3 font-body-md focus:outline-none focus:border-curry-leaf text-on-surface-variant">
+<option disabled="" selected="" value="">Event Type</option>
+<option value="corporate">Corporate Dinner</option>
+<option value="birthday">Birthday Celebration</option>
+<option value="anniversary">Anniversary</option>
+<option value="other">Other</option>
+</select>
+<button class="w-full bg-tertiary-custom text-white font-label text-label py-3 rounded-lg hover:opacity-90 transition-opacity" type="button">Request a callback</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Policies -->
+<section class="bg-milk-white py-stack_lg px-margin_mobile md:px-margin_desktop border-t border-hairline">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-h2 text-h2 text-center text-deep-forest mb-12">Everything you need before you visit.</h2>
+<div class="space-y-8">
+<div class="border-b border-hairline pb-6">
+<h4 class="font-body-md font-semibold text-deep-forest mb-2">Cancellation Policy</h4>
+<p class="font-body-md text-on-surface-variant">We require 24 hours notice for any cancellations or changes to your reservation. Late cancellations may incur a fee.</p>
+</div>
+<div class="border-b border-hairline pb-6">
+<h4 class="font-body-md font-semibold text-deep-forest mb-2">Dietary Requirements</h4>
+<p class="font-body-md text-on-surface-variant">Please inform us of any severe allergies at least 48 hours in advance so our kitchen can prepare accordingly. We offer robust vegetarian and vegan options.</p>
+</div>
+<div class="border-b border-hairline pb-6">
+<h4 class="font-body-md font-semibold text-deep-forest mb-2">Dress Code</h4>
+<p class="font-body-md text-on-surface-variant">Smart casual. We kindly ask guests to refrain from wearing sportswear or beachwear.</p>
+</div>
+<div class="border-b border-hairline pb-6">
+<h4 class="font-body-md font-semibold text-deep-forest mb-2">Parking</h4>
+<p class="font-body-md text-on-surface-variant">Valet parking is available at the main entrance. Self-parking is available in the adjacent lot.</p>
+</div>
+</div>
+<div class="text-center mt-12">
+<p class="font-body-md text-on-surface-variant mb-4">Have other questions?</p>
+<a class="inline-flex items-center gap-2 text-curry-leaf font-label text-label hover:underline" href="#">
+<span class="material-symbols-outlined text-sm">chat</span> Chat with us on WhatsApp
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-background text-on-primary dark:text-on-primary-fixed font-body-md text-body-md full-width bg-primary flat">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin_desktop py-stack_lg max-w-max_width mx-auto">
+<div class="text-h3 font-h3 font-semibold text-on-primary mb-4 md:mb-0">Arumai</div>
+<div class="text-center md:text-left mb-4 md:mb-0 text-sm opacity-80">
+                © 2024 Arumai. All Rights Reserved. FSSAI Lic. No. 12345678901234
+            </div>
+<div class="flex gap-6">
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Instagram</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Facebook</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover-elevate transition-transform z-50 flex items-center justify-center" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</body></html>

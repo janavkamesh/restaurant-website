@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arumai - Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Playfair+Display:wght@400;600&amp;family=Space+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#9dd3ae",
+                    "secondary-container": "#fdcd74",
+                    "on-background": "#0c2011",
+                    "primary-fixed-dim": "#9dd3ae",
+                    "secondary-fixed-dim": "#eec068",
+                    "outline": "#717972",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "primary": "#0f4429",
+                    "tertiary-container": "#853d28",
+                    "tertiary-fixed-dim": "#ffb59f",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#9dd2ae",
+                    "surface": "#eaffe9",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#3a0a00",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-primary-fixed": "#002110",
+                    "on-surface": "#0c2011",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#d6efd6",
+                    "on-primary-fixed-variant": "#1d5034",
+                    "on-surface-variant": "#414942",
+                    "on-secondary-container": "#785601",
+                    "surface-dim": "#c8e0c8",
+                    "surface-bright": "#eaffe9",
+                    "primary-fixed": "#b9efc9",
+                    "outline-variant": "#c0c9c0",
+                    "tertiary-fixed": "#ffdbd1",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#213524",
+                    "inverse-on-surface": "#dff7de",
+                    "on-tertiary-fixed-variant": "#76321d",
+                    "tertiary": "#672713",
+                    "secondary": "#7b5804",
+                    "surface-container-highest": "#d0e9d1",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#d0e9d1",
+                    "surface-tint": "#36684a",
+                    "background": "#eaffe9",
+                    "surface-container-low": "#e1fae1",
+                    "surface-container": "#dcf4dc",
+                    "primary-container": "#2a5c3f",
+                    "on-tertiary-container": "#ffb49e",
+                    "secondary-fixed": "#ffdea6",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#271900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin_desktop": "48px",
+                    "stack_sm": "8px",
+                    "gutter": "24px",
+                    "margin_mobile": "16px",
+                    "max_width": "1200px",
+                    "stack_md": "24px",
+                    "stack_lg": "64px"
+            },
+            "fontFamily": {
+                    "h1-mobile": [
+                            "Playfair Display"
+                    ],
+                    "h2": [
+                            "Playfair Display"
+                    ],
+                    "price": [
+                            "Space Mono"
+                    ],
+                    "h1-desktop": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label": [
+                            "Inter"
+                    ],
+                    "h3": [
+                            "Playfair Display"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "h1-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "h2": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "price": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h1-desktop": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "h3": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-40 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin_desktop max-w-max_width mx-auto h-20">
+<div class="text-h3 font-h3 font-semibold text-primary dark:text-inverse-primary">
+                Arumai
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold pb-1 font-body-md text-body-md" href="#">Menu</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Our Story</a>
+</div>
+<div class="hidden md:block">
+<button class="bg-secondary text-primary font-label text-label px-6 py-3 rounded-lg hover:bg-secondary-fixed transition-colors">
+                    Reserve
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- SECTION 1: CATEGORY TABS -->
+<div class="bg-surface-container-lowest sticky top-20 z-30 border-b border-outline-variant overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-4 px-margin_mobile md:px-margin_desktop py-4 max-w-max_width mx-auto min-w-max">
+<button class="px-6 py-2 rounded-full bg-primary text-secondary font-label text-label transition-colors">Starters</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface hover:bg-surface-dim font-label text-label transition-colors">Main Course</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface hover:bg-surface-dim font-label text-label transition-colors">Biryani &amp; Rice</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface hover:bg-surface-dim font-label text-label transition-colors">Drinks &amp; Juices</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface hover:bg-surface-dim font-label text-label transition-colors">Desserts</button>
+</div>
+</div>
+<main class="w-full">
+<!-- SECTION 2: SIGNATURE DISH -->
+<section class="bg-surface py-stack_lg px-margin_mobile md:px-margin_desktop">
+<div class="max-w-max_width mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="relative h-[400px] md:h-[600px] rounded-xl overflow-hidden shadow-lg border border-outline-variant">
+<img alt="Signature Dish" class="w-full h-full object-cover" data-alt="A beautifully plated traditional South Indian banana leaf meal featuring vibrant curries, rice, and delicate garnishes. The setting is a sophisticated modern fine-dining restaurant with warm, directional lighting highlighting the textures of the food. The aesthetic is grounded in nature with a modern, editorial approach, using a color palette of deep forest greens, ghee gold accents, and clean white linen surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZW9VFlVRSImyVc0fClbIjklRRXLircsbzPW-gz3vOV40TxVAoDqo12KazjM94tZ4ynCUVQfpQvg3lLQDWyaiGii09OlAC6cHlO0l0d28cwk3xMFep0vetxxxrD8edejAHu92r7szWMM20WI3RUc4a851C-fU1AUsParC6UlUc0arH_w05a99HqU6uqpiilKfOZtmt5Eyk-VP3XHzZ8N5OBch1_NxY8CcDK-Yx7JPyc0XvP8SurU6zcBM_09QNvgeoyahDELJOe3g"/>
+</div>
+<div class="flex flex-col gap-6 md:pl-8">
+<div>
+<span class="font-label text-label text-primary-container uppercase tracking-wider block mb-2">Chef's selection</span>
+<h2 class="font-h2 text-h2 text-primary mb-4">Mutton Chukka Varuval</h2>
+<div class="flex items-center gap-3 mb-6">
+<span class="w-2.5 h-2.5 rounded-full bg-[#7A3520] block"></span>
+<span class="font-price text-price text-secondary">₹520</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary-container font-label text-xs">Signature</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                            Tender cuts of mutton slow-roasted with caramelized shallots, freshly ground black pepper, and curry leaves. A rich, dry preparation that embodies the culinary heritage of Madurai.
+                        </p>
+</div>
+<a class="text-primary hover:text-secondary transition-colors font-label text-label mt-4 flex items-center gap-2 w-fit" href="#full-menu">
+                        View the full menu below
+                        <span class="material-symbols-outlined text-sm">arrow_downward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 3: FULL MENU -->
+<section class="bg-surface-container-lowest py-stack_lg px-margin_mobile md:px-margin_desktop" id="full-menu">
+<div class="max-w-[900px] mx-auto">
+<!-- Category: Starters -->
+<div class="mb-stack_lg">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-h2 text-h2 text-primary">Starters</h2>
+<div class="h-px flex-grow bg-secondary opacity-30 mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+<!-- Menu Item 1 -->
+<div class="flex gap-4 p-4 rounded-xl hover:shadow-[0_4px_12px_rgba(26,46,30,0.05)] transition-shadow border border-transparent hover:border-outline-variant bg-surface-container-lowest">
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2A5C3F] shrink-0"></span>
+<h3 class="font-body-lg text-body-lg font-semibold text-primary">Mushroom Pepper Fry</h3>
+</div>
+<span class="font-price text-price text-secondary ml-4">₹280</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Button mushrooms tossed with crushed peppercorns and fennel.</p>
+</div>
+</div>
+<!-- Menu Item 2 (Featured) -->
+<div class="flex gap-4 p-4 rounded-xl shadow-[0_4px_12px_rgba(26,46,30,0.05)] border border-outline-variant bg-surface-container-lowest">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Chicken 65" class="w-full h-full object-cover" data-alt="A close-up shot of crispy, vibrant red Chicken 65 garnished with curry leaves and a lemon wedge, presented on a minimalist white ceramic plate. The lighting is warm and directional, emphasizing the crispy texture of the dish against a clean, modern table setting. The overall mood is appetizing and premium, following an editorial culinary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqADVugJ7soIOsn0FGJwKrwnv6hJPUFubZr3Gl8xQdFbTJRM0qu0EQ95t3-maSUwMMWkxF2T6EAyB4xdvZ4cayDrlIT93WUtIc-geOJFUsfC5Runch7UHlkAlQqnTPNqvclaIX8WWsEoK9xyZJfyvDGoaqmODKCJ_ZvpYWqAKD6fLJ10HKOhsYqm32UCoidDegjqG0FkQkeFjLxbDRBRhuyyzJvLtpVd9cfkiVuXoF4gNCOR2g1T_psSYeyp42zu84xgvQxxysyA0"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#7A3520] shrink-0"></span>
+<h3 class="font-body-lg text-body-lg font-semibold text-primary">Classic Chicken 65</h3>
+</div>
+<span class="font-price text-price text-secondary ml-4">₹320</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Deep-fried chicken marinated in a fiery blend of spices and yogurt.</p>
+</div>
+</div>
+<!-- Menu Item 3 -->
+<div class="flex gap-4 p-4 rounded-xl hover:shadow-[0_4px_12px_rgba(26,46,30,0.05)] transition-shadow border border-transparent hover:border-outline-variant bg-surface-container-lowest">
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#7A3520] shrink-0"></span>
+<h3 class="font-body-lg text-body-lg font-semibold text-primary">Nethili Fry</h3>
+</div>
+<span class="font-price text-price text-secondary ml-4">₹350</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Crispy anchovies marinated in red chili paste and dusted with rice flour.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Category: Drinks (Distinct BG) -->
+</div>
+</section>
+<section class="bg-surface py-stack_lg px-margin_mobile md:px-margin_desktop">
+<div class="max-w-[900px] mx-auto">
+<div class="mb-stack_lg">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-h2 text-h2 text-primary">Drinks &amp; Juices</h2>
+<div class="h-px flex-grow bg-secondary opacity-30 mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+<!-- Drink Item 1 -->
+<div class="flex gap-4 p-4 rounded-xl hover:shadow-[0_4px_12px_rgba(26,46,30,0.05)] transition-shadow border border-transparent hover:border-outline-variant bg-surface">
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2A5C3F] shrink-0"></span>
+<h3 class="font-body-lg text-body-lg font-semibold text-primary">Jigarthanda</h3>
+</div>
+<span class="font-price text-price text-secondary ml-4">₹180</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Madurai's famous cooling drink with almond gum, sarsaparilla syrup, and ice cream.</p>
+</div>
+</div>
+<!-- Drink Item 2 -->
+<div class="flex gap-4 p-4 rounded-xl hover:shadow-[0_4px_12px_rgba(26,46,30,0.05)] transition-shadow border border-transparent hover:border-outline-variant bg-surface">
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2A5C3F] shrink-0"></span>
+<h3 class="font-body-lg text-body-lg font-semibold text-primary">Filter Kaapi</h3>
+</div>
+<span class="font-price text-price text-secondary ml-4">₹90</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Traditional South Indian degree coffee served in a brass dabara set.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: RESERVE CTA -->
+<section class="bg-primary text-on-primary py-stack_lg px-margin_mobile md:px-margin_desktop">
+<div class="max-w-max_width mx-auto text-center flex flex-col items-center">
+<h2 class="font-h2 text-h2 mb-8">Ready to experience it?</h2>
+<button class="bg-secondary text-primary font-label text-label px-8 py-4 rounded-lg hover:bg-secondary-fixed transition-colors flex items-center gap-2 mb-8 text-lg">
+                    Reserve your table
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-6 text-surface-variant">
+<a class="flex items-center gap-2 hover:text-secondary transition-colors font-body-md" href="tel:+919876543210">
+<span class="material-symbols-outlined">call</span>
+                        +91 98765 43210
+                    </a>
+<div class="w-px h-4 bg-outline-variant opacity-50"></div>
+<div class="flex gap-4">
+<a class="hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">calendar_month</span></a>
+<a class="hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">restaurant</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-background w-full">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin_desktop py-stack_lg max-w-max_width mx-auto gap-8">
+<div class="text-h3 font-h3 font-semibold text-on-primary">
+                Arumai
+            </div>
+<div class="text-on-primary-fixed-variant font-body-md text-body-md text-center md:text-left">
+                © 2024 Arumai. All Rights Reserved. FSSAI Lic. No. 12345678901234
+            </div>
+<div class="flex gap-6">
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-body-md text-body-md" href="#">Instagram</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-body-md text-body-md" href="#">Facebook</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-body-md text-body-md" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform z-50" href="#">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</a>
+<!-- BottomNavBar (Mobile Only - Suppressed as per instructions for Destination Page where TopNav is sufficient, but included as per JSON requirement if strictly needed for specific mobile flow. Based on rules: "On MOBILE (md:hidden), prohibit top-row text links and use the BottomNavBar." -> Adjusting to ensure compliance with JSON and Rules.) -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-primary dark:bg-on-background shadow-lg">
+<a class="flex flex-col items-center justify-center bg-secondary text-on-secondary rounded-xl p-2 hover:bg-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="font-label text-[10px] mt-1">Book Table</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label text-[10px] mt-1">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label text-[10px] mt-1">WhatsApp</span>
+</a>
+</div>
+</body></html>

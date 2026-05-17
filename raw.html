@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arumai - Premium Tamil Cuisine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Playfair+Display:wght@400;600&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#9dd3ae",
+                        "secondary-container": "#fdcd74",
+                        "on-background": "#0c2011",
+                        "primary-fixed-dim": "#9dd3ae",
+                        "secondary-fixed-dim": "#eec068",
+                        "outline": "#717972",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary": "#0f4429",
+                        "tertiary-container": "#853d28",
+                        "tertiary-fixed-dim": "#ffb59f",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#9dd2ae",
+                        "surface": "#eaffe9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#3a0a00",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-primary-fixed": "#002110",
+                        "on-surface": "#0c2011",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#d6efd6",
+                        "on-primary-fixed-variant": "#1d5034",
+                        "on-surface-variant": "#414942",
+                        "on-secondary-container": "#785601",
+                        "surface-dim": "#c8e0c8",
+                        "surface-bright": "#eaffe9",
+                        "primary-fixed": "#b9efc9",
+                        "outline-variant": "#c0c9c0",
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#213524",
+                        "inverse-on-surface": "#dff7de",
+                        "on-tertiary-fixed-variant": "#76321d",
+                        "tertiary": "#672713",
+                        "secondary": "#7b5804",
+                        "surface-container-highest": "#d0e9d1",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#d0e9d1",
+                        "surface-tint": "#36684a",
+                        "background": "#eaffe9",
+                        "surface-container-low": "#e1fae1",
+                        "surface-container": "#dcf4dc",
+                        "primary-container": "#2a5c3f",
+                        "on-tertiary-container": "#ffb49e",
+                        "secondary-fixed": "#ffdea6",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#271900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin_desktop": "48px",
+                        "stack_sm": "8px",
+                        "gutter": "24px",
+                        "margin_mobile": "16px",
+                        "max_width": "1200px",
+                        "stack_md": "24px",
+                        "stack_lg": "64px"
+                    },
+                    "fontFamily": {
+                        "h1-mobile": ["Playfair Display"],
+                        "h2": ["Playfair Display"],
+                        "price": ["Space Mono"],
+                        "h1-desktop": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label": ["Inter"],
+                        "h3": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "h2": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "price": ["18px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                        "h1-desktop": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "h3": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAF7] text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim text-primary dark:text-inverse-primary font-body-md text-body-md docked full-width top-0 sticky border-b border-outline-variant dark:border-outline flat no shadows z-50 transition-colors">
+<div class="flex justify-between items-center w-full px-margin_desktop max-w-max_width mx-auto h-20">
+<div class="text-h3 font-h3 font-semibold text-primary dark:text-inverse-primary">Arumai</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold pb-1 Active: scale-95 duration-150" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Menu</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Our Story</a>
+</nav>
+<button class="hidden md:block bg-[#D4A853] text-[#1A2E1E] font-label text-label py-3 px-6 rounded-lg hover:bg-[#c49a4b] transition-colors">
+                Reserve
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- SECTION 1: HERO -->
+<section class="relative min-h-[921px] flex items-center justify-center border-b-4 border-primary">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A stunning, high-quality photograph of an authentic South Indian Chettinad feast spread out on a fresh banana leaf. The scene is illuminated by warm, directional sunlight that highlights the rich, deep reds of spicy curries and the golden hues of crispy dosas. The composition is highly editorial and modern, emphasizing texture and quality. The overall aesthetic is premium, balancing traditional heritage with contemporary fine dining sensibilities." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDy9k_LMRg4e4_Ra3WCypdFInVKcYJzrHhpO-48Z9v6Ij7X4h0rJu2zLTJbdCLzg_JiWu6RmPKcgrQM7BptL2KMFmAwGXwvJi5CPos8cUBJGInOX_U2HSyfTGQusBkWkrO6yNCWJpGeQ8OQ2ZZmO9JlYQ2XU2BfVqRU_oIId83Te-PuD0Iz7tPsb-l8mzeJREpno8IjV3BLkplxHOQIUk6oX2zXbkNxP1WwJhB6rTPIQWnS7Ky4y3iSlV5YkqlB-TpCH8oNlzuz7CU');"></div>
+<div class="absolute inset-0 bg-black/35"></div>
+</div>
+<div class="relative z-10 w-full max-w-max_width mx-auto px-margin_mobile md:px-margin_desktop text-center text-[#F2E8D6] flex flex-col items-center pt-20 pb-16">
+<div class="inline-flex items-center space-x-2 bg-black/40 backdrop-blur-sm rounded-full py-2 px-4 mb-stack_md border border-[#E2D9C6]/20">
+<span class="text-yellow-400">★</span>
+<span class="font-label text-label font-medium">4.8 on Google</span>
+</div>
+<div class="font-label text-label uppercase tracking-widest mb-stack_sm text-[#F2E8D6]/90">
+                    Chennai · Authentic Tamil Cuisine
+                </div>
+<h1 class="font-h1-mobile md:font-h1-desktop text-h1-mobile md:text-h1-desktop text-[#F2E8D6] max-w-4xl mx-auto mb-stack_md">
+                    The flavours your grandmother remembered.
+                </h1>
+<p class="font-body-lg text-body-lg text-[#F2E8D6]/90 max-w-2xl mx-auto mb-stack_lg">
+                    Chettinad &amp; coastal Tamil classics in the heart of T. Nagar — open daily, 12 PM to 11 PM.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 w-full sm:w-auto">
+<button class="w-full sm:w-auto bg-[#D4A853] text-[#1A2E1E] font-label text-label py-4 px-8 rounded-lg hover:bg-[#c49a4b] transition-all flex items-center justify-center space-x-2">
+<span>Reserve your table</span>
+<span>→</span>
+</button>
+<button class="w-full sm:w-auto bg-transparent border border-[#F2E8D6] text-[#F2E8D6] font-label text-label py-4 px-8 rounded-lg hover:bg-[#F2E8D6]/10 transition-all">
+                        View our menu
+                    </button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: PROOF BAR -->
+<section class="bg-[#FAFAF7] border-b border-[#E2D9C6] py-8">
+<div class="max-w-max_width mx-auto px-margin_mobile md:px-margin_desktop flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12 opacity-80 grayscale">
+<p class="font-body-md text-body-md italic text-center max-w-md">"Rated Chennai's top 10 authentic Tamil restaurants" — The Hindu</p>
+<div class="flex items-center space-x-8 text-sm font-label text-label uppercase tracking-wider font-bold">
+<span>MICHELIN</span>
+<span>TIMES FOOD</span>
+<span>ZOMATO</span>
+</div>
+</div>
+</section>
+<!-- SECTION 3: SIGNATURES -->
+<section class="bg-[#FAFAF7] py-stack_lg">
+<div class="max-w-max_width mx-auto px-margin_mobile md:px-margin_desktop">
+<div class="flex flex-col items-center mb-stack_lg text-center">
+<div class="w-1 h-8 bg-[#D4A853] mb-4"></div>
+<h2 class="font-h2 text-h2 text-[#1A2E1E]">Our signatures</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Dish Card 1 -->
+<div class="bg-white rounded-xl border border-[#E2D9C6] overflow-hidden hover:border-[#2A5C3F] transition-colors group cursor-pointer">
+<div class="aspect-square bg-cover bg-center" data-alt="A beautifully plated traditional Chettinad Chicken Curry served in a dark ceramic bowl, garnished with fresh curry leaves and whole red chilies. The lighting is warm and directional, enhancing the rich, spicy textures of the dish. The background is a clean, minimalist off-white surface that creates a modern editorial look." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAPvtE7V_W6tHUtCChFz1RSawJtmfUkQ_w2rHBfq2eyCAjlDRjSzIl8k7jnBFCGCvmyVFEOTyB3Qz2aR0eG4985trakn6OjmbO6dkrnR_NcV-DT39hxa6ti_UlmLd4VtDAAG3C8acMKP3x_QkNycSoJYPW8tt9j2Zg_mfXxex6TTEp0mE1HjJIojSLo1u0vtSg7CfntNtbk2ueefeEvGLWWE7W4bB9ajoit8dK4bTogTRfxwPHhMMxHG29jMg_obRxw20jMyJETRQ');"></div>
+<div class="p-6 flex flex-col items-center text-center">
+<div aria-label="Non-Vegetarian" class="w-2.5 h-2.5 rounded-full bg-[#7A3520] mb-3"></div>
+<h3 class="font-h3 text-h3 text-[#1A2E1E] mb-2 text-xl">Chettinad Kozhi Curry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 text-sm">A robust chicken curry simmered with hand-pounded spices, black pepper, and fresh coconut.</p>
+<span class="font-price text-price text-[#D4A853] mt-auto">₹420</span>
+</div>
+</div>
+<!-- Dish Card 2 -->
+<div class="bg-white rounded-xl border border-[#E2D9C6] overflow-hidden hover:border-[#2A5C3F] transition-colors group cursor-pointer">
+<div class="aspect-square bg-cover bg-center" data-alt="A perfectly crispy, golden-brown Masala Dosa folded neatly on a traditional brass plate. It is accompanied by small bowls of vibrant coconut chutney and rich, dark sambar. The scene is shot from a top-down perspective with soft, diffused light, highlighting the premium, authentic nature of South Indian cuisine in a minimalist setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCz_W7DNQjeDWyAmUOqKFxZmHVectMxYpGxJtlvAsBu942SKUQbAuDa3QvDH_abL0sm3r6gqmOpXuBHefXwJZk3DFUGIdH3NsEvuZ1QgFE5Ty8RrLXYhb-VxomTZHKp2McdJfks3oN4_sKUPYZhZg_szvjScJ6Jkwd4Wz1GaDjFq9053ywx6OUgkf3r4EQ065qWxohZStT_8FpjgE-cwZ1Nl9qDJ0fm2WyMMjQX9HWfODvoctFlZ4LMSI2YViQ3ZWmj6Ar_kiEz0XU');"></div>
+<div class="p-6 flex flex-col items-center text-center">
+<div aria-label="Vegetarian" class="w-2.5 h-2.5 rounded-full bg-[#2A5C3F] mb-3"></div>
+<h3 class="font-h3 text-h3 text-[#1A2E1E] mb-2 text-xl">Ghee Roast Dosa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 text-sm">Crispy crepe made from fermented rice and lentil batter, roasted in pure homemade ghee.</p>
+<span class="font-price text-price text-[#D4A853] mt-auto">₹280</span>
+</div>
+</div>
+<!-- Dish Card 3 -->
+<div class="bg-white rounded-xl border border-[#E2D9C6] overflow-hidden hover:border-[#2A5C3F] transition-colors group cursor-pointer">
+<div class="aspect-square bg-cover bg-center" data-alt="A serving of authentic South Indian Mutton Biryani presented in an elegant, traditional copper pot. The long-grain rice is perfectly spiced and interspersed with tender meat. Soft, atmospheric lighting casts gentle shadows, emphasizing the rich culinary heritage and premium dining experience associated with authentic Tamil cuisine." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOrpKc8EWdQO7XP3BPVI1Pe9bIFSr2vD1pV-U7yUrU6hRArCM7IsPkL2sipJu9iQUY5VGW4CT38IO5z9cNqCjA18RoGfiTpeuIdkbnY-mcHOY2KcsKSw-P4MPhOs-SzOZnS3AXQFbvbAZNWPSiC6raGIqNXpCx4BO2m_hgbRT5bDRJmNButFch7wc6hY0MeCLa6-D8amqDQRBHCkVgktU3xPydLGp-Ooltu_8-vZy7K-TWmoWfc4giw7EdHhYSqkyqThzmk5XCZf4');"></div>
+<div class="p-6 flex flex-col items-center text-center">
+<div aria-label="Non-Vegetarian" class="w-2.5 h-2.5 rounded-full bg-[#7A3520] mb-3"></div>
+<h3 class="font-h3 text-h3 text-[#1A2E1E] mb-2 text-xl">Dindigul Mutton Biryani</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 text-sm">Short-grain seeraga samba rice cooked with tender mutton and a secret blend of aromatic spices.</p>
+<span class="font-price text-price text-[#D4A853] mt-auto">₹550</span>
+</div>
+</div>
+</div>
+<div class="mt-stack_lg text-center">
+<a class="inline-flex items-center font-label text-label text-[#1A2E1E] border-b border-[#1A2E1E] pb-1 hover:text-[#2A5C3F] hover:border-[#2A5C3F] transition-colors" href="#">
+                        Explore the full menu <span class="ml-2">→</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 4: STORY TEASER -->
+<section class="bg-[#F2E8D6] py-stack_lg">
+<div class="max-w-max_width mx-auto px-margin_mobile md:px-margin_desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1 pr-0 md:pr-12">
+<div class="font-label text-label uppercase tracking-widest text-[#2A5C3F] mb-4 flex items-center">
+<div class="w-8 h-0.5 bg-[#D4A853] mr-4"></div>
+                        Our story
+                    </div>
+<h2 class="font-h2 text-h2 text-[#1A2E1E] mb-stack_md">This kitchen was built on one obsession.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        Before Arumai was a restaurant, it was a legacy kept alive in a small kitchen in Karaikudi. Rajkumar Pillai spent his childhood watching his mother dry red chilies in the sun and hand-pound masalas on a stone grinder. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack_md">
+                        Today, we preserve those exacting standards. No shortcuts. No commercial spice blends. Just the authentic taste of a Tamil home, served with the refined elegance it deserves.
+                    </p>
+<a class="inline-flex items-center font-label text-label text-[#1A2E1E] border-b border-[#1A2E1E] pb-1 hover:text-[#2A5C3F] hover:border-[#2A5C3F] transition-colors" href="#">
+                        Read our full story <span class="ml-2">→</span>
+</a>
+</div>
+<div class="order-1 md:order-2 mb-stack_md md:mb-0 relative">
+<div class="aspect-[3/4] w-full bg-cover bg-center rounded-sm" data-alt="A portrait of an experienced South Indian chef standing proudly in a softly lit, professional kitchen. He wears a clean, crisp white chef's coat. The lighting is warm and dramatic, highlighting the wisdom in his face and his deep connection to culinary traditions. The background is slightly blurred, emphasizing a modern yet heritage-focused atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeDGXxp-JubxhNmK3BKj3WBNPKRaWodycJO-uwR1PfUtPUzy6BYmiCixzB59EqcpFFyLMtG1Mb3FNIi63DMGthmX1sDFi3EDtVKnNmglTlhJRpWHbUUjjxfdxrPQ9F2X9S_ynz5qQDKwaf8eUb6elu1wIBs5Gq9AFM4OVcUspjakQXo6FtcchxHgdsFMZFsOWfkucIwzOc2T7b19y-L036Zp4NtWF008ucKGyjRxKMhfX5Ck1GoKOR6tdAh4oH7lyc5q4vEI_dBcQ');"></div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 border border-[#E2D9C6] hidden md:block">
+<p class="font-h3 text-h3 text-[#1A2E1E] italic mb-1 text-xl">"Tradition takes time."</p>
+<p class="font-label text-label text-on-surface-variant uppercase text-xs tracking-wider">— Chef Rajkumar Pillai</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: RESERVE/VISIT -->
+<section class="bg-[#1A2E1E] text-[#F2E8D6] py-stack_lg">
+<div class="max-w-max_width mx-auto px-margin_mobile md:px-margin_desktop text-center">
+<h2 class="font-h2 text-h2 mb-stack_md">Reserve your table</h2>
+<button class="bg-[#D4A853] text-[#1A2E1E] font-label text-label py-4 px-12 rounded-lg hover:bg-[#c49a4b] transition-all inline-flex items-center space-x-2 mb-stack_lg">
+<span>Reserve now</span>
+<span>→</span>
+</button>
+<div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 mb-stack_lg font-body-md text-body-md border-t border-b border-[#F2E8D6]/10 py-8">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-[#D4A853]" data-icon="schedule">schedule</span>
+<span>Daily, 12 PM – 11 PM</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-[#D4A853]" data-icon="location_on">location_on</span>
+<span>123 Heritage Lane, T. Nagar, Chennai</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-[#D4A853]" data-icon="call">call</span>
+<span>+91 98765 43210</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+<div class="bg-white/5 border border-[#F2E8D6]/20 p-6 rounded-xl flex flex-col items-center">
+<span class="font-h3 text-h3 text-[#D4A853] mb-2">4.8 ★</span>
+<span class="font-label text-label uppercase tracking-widest text-[#F2E8D6]/70 text-xs">Guest Rating</span>
+</div>
+<div class="bg-white/5 border border-[#F2E8D6]/20 p-6 rounded-xl flex flex-col items-center">
+<span class="font-h3 text-h3 text-[#D4A853] mb-2">18 yrs</span>
+<span class="font-label text-label uppercase tracking-widest text-[#F2E8D6]/70 text-xs">Culinary Legacy</span>
+</div>
+<div class="bg-white/5 border border-[#F2E8D6]/20 p-6 rounded-xl flex flex-col items-center">
+<span class="font-h3 text-h3 text-[#D4A853] mb-2">90 min</span>
+<span class="font-label text-label uppercase tracking-widest text-[#F2E8D6]/70 text-xs">Avg. Dining Time</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-background text-on-primary dark:text-on-primary-fixed font-body-md text-body-md full-width flat flex flex-col md:flex-row justify-between items-center w-full px-margin_desktop py-stack_lg max-w-max_width mx-auto">
+<div class="mb-6 md:mb-0 text-center md:text-left">
+<div class="text-h3 font-h3 font-semibold text-on-primary mb-2">Arumai</div>
+<p class="text-on-primary-fixed-variant text-sm">© 2024 Arumai. All Rights Reserved. FSSAI Lic. No. 12345678901234</p>
+</div>
+<nav class="flex space-x-6">
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Instagram</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Facebook</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Twitter</a>
+</nav>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-primary dark:bg-on-background text-on-primary dark:text-on-primary-fixed font-label text-label shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container Active: scale-95 duration-100" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="event_seat">event_seat</span>
+<span class="text-xs">Book Table</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container Active: scale-95 duration-100" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="call">call</span>
+<span class="text-xs">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary dark:text-on-primary-fixed p-2 hover:bg-primary-container Active: scale-95 duration-100" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat">chat</span>
+<span class="text-xs">WhatsApp</span>
+</a>
+</nav>
+<!-- Floating WhatsApp Button (Desktop) -->
+<div class="hidden md:flex fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-105 transition-transform cursor-pointer z-50 items-center justify-center">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</div>
+</body></html>
